@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import AsyncSelect from '../../src/Async';
+import AsyncSelect from '../../src/Async2';
 import { colourOptions } from '../data';
 
 type State = {
@@ -13,12 +13,14 @@ const filterColors = (inputValue: string) => {
   );
 };
 
-const promiseOptions = inputValue =>
-  new Promise(resolve => {
+const promiseOptions = inputValue => {
+  console.log('I AM BEING CALLED');
+  return new Promise(resolve => {
     setTimeout(() => {
       resolve(filterColors(inputValue));
     }, 1000);
   });
+};
 
 export default class WithPromises extends Component<*, State> {
   state = { inputValue: '' };
@@ -29,7 +31,12 @@ export default class WithPromises extends Component<*, State> {
   };
   render() {
     return (
-      <AsyncSelect cacheOptions defaultOptions loadOptions={promiseOptions} />
+      <AsyncSelect
+        defaultInputValue="n"
+        cacheOptions
+        defaultOptions
+        loadOptions={promiseOptions}
+      />
     );
   }
 }
