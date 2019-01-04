@@ -37,7 +37,7 @@ const SingleValue = (props: SingleValueProps) => {
     <ClassNames>
        {({ css }) => (
          <div
-           classNames={cx(
+           className={cx(
              css(getStyles('singleValue', props)),
              {
                'single-value': true,
