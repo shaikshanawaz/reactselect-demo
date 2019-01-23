@@ -14,7 +14,6 @@ const filterColors = (inputValue: string) => {
 };
 
 const promiseOptions = inputValue => {
-  console.log('I AM BEING CALLED');
   return new Promise(resolve => {
     setTimeout(() => {
       resolve(filterColors(inputValue));
