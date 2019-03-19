@@ -6,8 +6,8 @@ import { withRouter } from 'react-router-dom';
 
 import Select from '../../src';
 import type { RouterProps } from '../types';
-import GitHubButton from './GitHubButton';
-import TwitterButton from './TwitterButton';
+//import GitHubButton from './GitHubButton';
+//import TwitterButton from './TwitterButton';
 
 const smallDevice = '@media (max-width: 769px)';
 const largeDevice = '@media (min-width: 770px)';
